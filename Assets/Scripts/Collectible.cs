@@ -11,7 +11,7 @@ public class Collectible : MonoBehaviour
         player.UpdateCollectible(this);
     }
 
-    public void RemovePlayerInterractable(Player player)
+    public void RemovePlayerInteractable(Player player)
     {
         player.UpdateCollectible(null);
     }
