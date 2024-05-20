@@ -4,6 +4,22 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            UpdatePlayerInterractable(other.gameObject.GetComponent<Player>());
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            RemovePlayerInterractable(other.gameObject.GetComponent<Player>());
+        }
+    }
+
     public void UpdatePlayerInterractable(Player player)
     {
         player.UpdateCollectible(this);

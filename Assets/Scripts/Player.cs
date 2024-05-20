@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Collectible currentCollectible;
-
+    
     public void UpdateCollectible(Collectible item)
     {
         currentCollectible = item;
@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     {
         if(currentCollectible != null)
         {
-            currentCollectible.Collected();
+            currentCollectible.Collected(this);
         }
     }
 

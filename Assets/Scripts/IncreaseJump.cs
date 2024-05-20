@@ -3,22 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IncreaseSpeed : Collectible
+public class IncreaseJump : Collectible
 {
-    public float speedIncrease = 10f;
-    
+    float increaseJump = 10f;
 
     public override void Collected(Player player)
     {
         base.Collected(player);
-        float currentSpeed = player.GetComponent<FirstPersonController>().MoveSpeed;
-        currentSpeed += speedIncrease;
-        Debug.Log(currentSpeed);
-        
+        float currentJumpHeight = player.GetComponent<FirstPersonController>().JumpHeight;
+        currentJumpHeight += increaseJump;
+        Debug.Log(currentJumpHeight);
     }
-
-
-
     // Start is called before the first frame update
     void Start()
     {
