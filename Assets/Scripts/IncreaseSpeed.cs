@@ -13,6 +13,7 @@ public class IncreaseSpeed : Collectible
         base.Collected(player);
         float currentSpeed = player.GetComponent<FirstPersonController>().MoveSpeed;
         currentSpeed += speedIncrease;
+        player.GetComponent<FirstPersonController>().MoveSpeed = currentSpeed;
         Debug.Log(currentSpeed);
         
     }

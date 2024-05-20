@@ -12,7 +12,7 @@ public class IncreaseJump : Collectible
         base.Collected(player);
         float currentJumpHeight = player.GetComponent<FirstPersonController>().JumpHeight;
         currentJumpHeight += increaseJump;
-        Debug.Log(currentJumpHeight);
+        player.GetComponent<FirstPersonController>().JumpHeight = currentJumpHeight;
     }
     // Start is called before the first frame update
     void Start()

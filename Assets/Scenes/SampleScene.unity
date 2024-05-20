@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 1240779417}
   - component: {fileID: 1240779416}
   - component: {fileID: 1240779415}
-  - component: {fileID: 1240779414}
+  - component: {fileID: 1240779419}
   m_Layer: 0
   m_Name: Increase speed collectible
   m_TagString: Untagged
@@ -379,19 +379,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1240779414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1240779413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5fb266fc92fff44990f83f67edc27b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedIncrease: 10
 --- !u!65 &1240779415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -478,6 +465,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1240779419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240779413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5fb266fc92fff44990f83f67edc27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedIncrease: 5
 --- !u!1 &1869133901 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 453084650579209855, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}

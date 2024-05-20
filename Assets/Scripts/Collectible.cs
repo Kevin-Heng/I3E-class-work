@@ -4,23 +4,9 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            UpdatePlayerInterractable(other.gameObject.GetComponent<Player>());
-        }
-    }
+   
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            RemovePlayerInterractable(other.gameObject.GetComponent<Player>());
-        }
-    }
-
-    public void UpdatePlayerInterractable(Player player)
+    public void UpdatePlayerInteractable(Player player)
     {
         player.UpdateCollectible(this);
     }
@@ -33,6 +19,22 @@ public class Collectible : MonoBehaviour
     {
         Debug.Log("collected");
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            UpdatePlayerInteractable(other.gameObject.GetComponent<Player>());
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            RemovePlayerInteractable(other.gameObject.GetComponent<Player>());
+        }
     }
 
     // Start is called before the first frame update
