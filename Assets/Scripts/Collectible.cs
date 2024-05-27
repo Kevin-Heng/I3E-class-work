@@ -34,6 +34,7 @@ public class Collectible : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             RemovePlayerInteractable(other.gameObject.GetComponent<Player>());
+
         }
     }
 

@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     Collectible currentCollectible;
-    
     public void UpdateCollectible(Collectible item)
     {
         currentCollectible = item;
@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
             currentCollectible.Collected(this);
         }
     }
+
 
     // Start is called before the first frame update
     void Start()
