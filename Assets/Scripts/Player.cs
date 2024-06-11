@@ -13,10 +13,7 @@ public class Player : MonoBehaviour
 
     public TextMeshProUGUI interactText;
 
-    public void UpdateCollectible(Collectible item)
-    {
-        currentCollectible = item;
-    }
+
     void OnInteract()
     {
         if(currentCollectible != null)
@@ -42,6 +39,7 @@ public class Player : MonoBehaviour
             if (hitInfo.transform.TryGetComponent<Collectible>(out currentCollectible)) //check if gameObject hit by ray has Collectible component script
             {
                 interactText.gameObject.SetActive(true);
+
             }
             else //text is gone if game object hit by ray does not have Collectible component script
             {
